@@ -8,14 +8,112 @@
     font-family: "Roboto", sans-serif;
 }
 
+img{
+    width: 80px;
+    border-radius: 3.14rem;
+}
+
 #container{
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
+    padding: 2rem;
+    height: 100vh;
+    /* width: 90vw; */
+    /* margin: auto; */
+}
+
+.sidebar{
+    background-color: indianred;
+    border: 3px solid green;
+    grid-row: 1 / 3;
+    /* height: 100%; */
+    padding: 1rem;
+}
+
+.sidebarListItem{
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.sidebarListItem a{
+    text-decoration: none;
+    /* color: #495867; */
+}
+
+.sidebarListItem a:visited{
+    text-decoration: none;
+}
+
+.sidebar ul:nth-child(2){
+    margin-top: 10rem;
 }
 
 .topbar{
     grid-column: 2;
+    background-color: cadetblue;
+}
+
+.searchbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid red;
+    height: 4rem;
+    padding-left: 3rem;
+}
+
+.searchbar>img{
+    height: 100%;
+    width: auto;
+}
+
+.searchbar input{
+    width: 40%;
+    margin: 0 1rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+.secondBar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5rem;
+    border: 3px solid blue;
+    padding: 0 2rem;
+}
+
+.secondBar p{
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.secondBar a{
+    font-size: 3rem;
+    text-decoration: none;
+    color: black;
+}
+
+.secondBar a:visited{
+    text-decoration: none;
+}
+
+.btnProject{
+    margin: auto;
+}
+
+.btnProject button{
+    width: 8rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    border: none;
+    background-color: #495867;
+    color: #ECC8AF;
+    font-size: 1.5rem;
+    /* margin: 1rem; */
 }
 
 .mainContent{
@@ -23,29 +121,98 @@
     grid-row: 2;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(auto-fill, 1fr);
 }
 
 .projectContainer{
     grid-row: 1 / 3;
     display: flex;
     flex-direction: column;
+    background-color: cornflowerblue;
+    border: 3px solid purple;
+    padding: 1.5rem;
 }
 
 .projectContent{
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-rows: repeat(1fr);
+    /* flex-flow: row wrap; */
+    height: 100%;
+    padding-top: 1rem;
 }
 
 .cardProject{
-    width: 40%;
+    border-left: 3px solid orangered;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.cardProject>h1{
+    margin-bottom: 1rem;
+}
+
+.cardBtn{
+    margin-top: 2rem;
+    align-self: flex-end;
+    font-size: 1.5rem;
+}
+
+.cardBtn>i{
+    margin: 0 0.5rem;
 }
 
 .announcement{
     grid-column: 2;
+    background-color: darkkhaki;
+    border: 3px solid orange;
+    padding: 1rem;
+}
+
+.cardAnnouncement{
+    padding: 0.8rem;
+    border: 1px solid grey;
+    border-radius: 0.8rem;
+}
+
+.cardAnnouncement div{
+    margin: 1.5rem;
+    border-bottom: 2px solid grey;
+    width: 90%;
+}
+
+.cardAnnouncement>div>h3{
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.cardAnnouncement>div>p{
+    margin-bottom: 0.8rem;
+    font-weight: 300;
 }
 
 .trendingProject{
     grid-column: 2;
     grid-row: 2;
+    background-color: dodgerblue;
+    border: 3px solid black;
+    padding: 1rem;
+}
+
+.trendingList{
+    padding: 0.8rem;
+}
+
+.trendingList>li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.trendingListImg{
+    /* border-radius: 3.14rem; */
+    margin: 0.5rem 1.5rem;
 }
